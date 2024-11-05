@@ -1,0 +1,26 @@
+<h1><%= @message.title %></h1>
+<div><%= @message.body %></div>
+
+<h2>Comments</h2>
+<ul>
+  <% @message.comments.each do |comment| %>
+    <li>
+      <%= comment.body %> <!-- Displays the comment with rich text formatting -->
+
+      <%= link_to "Edit", edit_message_comment_path(@message, comment) %> |
+      <%= link_to "Delete", message_comment_path(@message, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Add a Comment</h3>
+<%= form_with(model: [ @message, @message.comments.build ], local: true) do |form| %>
+  <div>
+    <%= form.rich_text_area :body %> <!-- Uses Action Text for rich text input -->
+  </div>
+  <div>
+    <%= form.submit 'Post Comment' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Messages', messages_path %>
