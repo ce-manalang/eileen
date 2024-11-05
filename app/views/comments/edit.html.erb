@@ -1,0 +1,14 @@
+<h2>Edit Comment</h2>
+
+<%= form_with(model: [@message, @comment], local: true) do |form| %>
+  <div>
+    <%= form.label :body, "Comment" %>
+    <%= form.rich_text_area :body %> <!-- Allows rich text editing -->
+  </div>
+  
+  <div>
+    <%= form.submit "Update Comment" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to Message", @message %>

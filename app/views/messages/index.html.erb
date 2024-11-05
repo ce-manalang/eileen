@@ -1,0 +1,10 @@
+<h1>Message Board</h1>
+<%= link_to 'New Message', new_message_path %>
+<ul>
+  <% @messages.each do |message| %>
+    <li>
+      <%= link_to message.title, message_path(message) %>
+      (<%= message.comments.count %> comments)
+    </li>
+  <% end %>
+</ul>
