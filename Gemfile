@@ -61,6 +61,6 @@ gem "devise", "~> 4.9"
 
 gem "pg", "~> 1.5"
 
-gem "aws-sdk-s3", "~> 1.172", require: false
+gem "aws-sdk-s3", "~> 1.173", require: false
 
 gem "tailwindcss-rails", "~> 3.0"
