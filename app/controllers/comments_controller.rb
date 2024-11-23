@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @message.comments.build(comment_params)
+    @comment.author = current_user
 
     if @comment.save
       redirect_to @message, notice: 'Comment was successfully created.'
