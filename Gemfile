@@ -59,8 +59,9 @@ gem "noticed", "~> 2.4"
 
 gem "devise", "~> 4.9"
 
-gem "pg", "~> 1.5"
 
 gem "aws-sdk-s3", "~> 1.172", require: false
 
 gem "tailwindcss-rails", "~> 3.0"
+
+gem "sqlite3", "~> 2.3"
