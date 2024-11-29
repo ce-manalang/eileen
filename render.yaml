@@ -1,8 +1,3 @@
-databases:
-  - name: postgres
-    ipAllowList: []
-    plan: free
-
 services:
   - type: web
     name: rails
@@ -13,10 +8,6 @@ services:
     envVars:
       - key: RAILS_MASTER_KEY
         sync: false
-      - key: DATABASE_URL
-        fromDatabase:
-          name: postgres
-          property: connectionString
   - type: redis
     name: redis
     ipAllowList: []

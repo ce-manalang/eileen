@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.2].define(version: 2024_11_22_043428) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -53,11 +50,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_22_043428) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.bigint "message_id", null: false
+    t.integer "message_id", null: false
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id", null: false
+    t.integer "author_id"
     t.index ["author_id"], name: "index_comments_on_author_id"
     t.index ["message_id"], name: "index_comments_on_message_id"
   end
@@ -67,7 +64,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_22_043428) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id", null: false
+    t.integer "author_id", null: false
     t.index ["author_id"], name: "index_messages_on_author_id"
   end
 
@@ -75,7 +72,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_22_043428) do
     t.string "type"
     t.string "record_type"
     t.bigint "record_id"
-    t.jsonb "params"
+    t.json "params"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "notifications_count"
