@@ -8,8 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-User.create(
-  email: "user@example.com",
+User.create_with(
   password: "password",
   password_confirmation: "password",
-)
+).find_or_create_by(email: "user@example.com")
