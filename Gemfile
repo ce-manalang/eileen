@@ -64,4 +64,4 @@ gem "aws-sdk-s3", "~> 1.172", require: false
 
 gem "tailwindcss-rails", "~> 3.0"
 
-gem "sqlite3", "~> 2.3"
+gem "sqlite3", "~> 2.5"
