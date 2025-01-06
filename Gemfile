@@ -60,7 +60,7 @@ gem "noticed", "~> 2.4"
 gem "devise", "~> 4.9"
 
 
-gem "aws-sdk-s3", "~> 1.172", require: false
+gem "aws-sdk-s3", "~> 1.177", require: false
 
 gem "tailwindcss-rails", "~> 3.0"
 
