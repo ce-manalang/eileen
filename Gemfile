@@ -62,6 +62,6 @@ gem "devise", "~> 4.9"
 
 gem "aws-sdk-s3", "~> 1.172", require: false
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 3.3"
 
 gem "sqlite3", "~> 2.3"
