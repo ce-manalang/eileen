@@ -44,6 +44,6 @@ group :development, :test do
   gem 'pry', '~> 0.15.0'
 end
 
-gem 'google-apis-sheets_v4', '~> 0.18'
+gem 'google-apis-sheets_v4', '~> 0.41'
 gem 'googleauth', '~> 1.1'
 gem "kaminari", "~> 1.2"
