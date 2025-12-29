@@ -41,7 +41,7 @@ group :development, :test do
 end
 
 group :development, :test do
-  gem 'pry', '~> 0.15.0'
+  gem 'pry', '~> 0.16.0'
 end
 
 gem 'google-apis-sheets_v4', '~> 0.18'
